@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-public class ChronalCalibration implements AdventOfCodeSolution<Long> {
+public class ChronalCalibration implements AdventOfCodeSolution<Long, Long> {
 
     public Long partOne(String input) {
         return parseInput(input).stream()
