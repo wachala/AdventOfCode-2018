@@ -137,7 +137,8 @@ public class TheSumOfItsParts implements AdventOfCodeSolution<String, Integer> {
             return true;
 
         for (Character d : taskDependencies)
-            if (timeRequiredForTask[d - 'A'] > 0) return false;
+            if (timeRequiredForTask[d - 'A'] > 0)
+                return false;
 
         return true;
     }
@@ -150,7 +151,6 @@ public class TheSumOfItsParts implements AdventOfCodeSolution<String, Integer> {
         return null;
     }
 
-
     private boolean hasNoDependencies(int i, Map<Character, Set<Character>> taskToDependencies, boolean[] visited) {
         char c = (char) ('A' + i);
         Set<Character> dependencies = taskToDependencies.get(c);
@@ -159,7 +159,8 @@ public class TheSumOfItsParts implements AdventOfCodeSolution<String, Integer> {
             return true;
         }
         for (char d : dependencies) {
-            if (!visited[d - 'A']) return false;
+            if (!visited[d - 'A'])
+                return false;
         }
 
         return true;
